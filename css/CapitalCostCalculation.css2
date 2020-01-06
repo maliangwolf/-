@@ -1,0 +1,172 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-10-30 14:17:54
+ * @version $Id$
+ */
+
+*{margin: 0;padding: 0;}
+body{overflow-x: hidden;font-family:"微软雅黑";}
+html{ font-size:10px;}
+ul,li{list-style: none;display: block;}
+a{text-decoration: none;color: #fff;}
+
+
+
+/*外框*/
+#box{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+}
+/*内容区域*/
+.contentBox{
+	width: 100%;
+	height: 5.28rem;
+	background: #fc4736;
+	overflow: hidden;
+}
+.contentArea{
+	width: 92%;
+	height: 4rem;
+	background: #ffffff;
+	margin-left: 4%;
+	border-radius: 0.2rem;
+	overflow: hidden;
+	margin-top: 0.64rem;
+}
+.contentArea ul{
+	width: 94%;
+	height: 4rem;
+	margin-left: 6%;
+}
+.contentArea li{
+	width: 100%;
+	height: 0.99rem;
+	border-bottom: 1px solid #dedede;
+}
+.contentArea li span{
+	width: 30%;
+	height: 0.99rem;
+	line-height: 0.99rem;
+	display: block;
+	float: left;
+	color: #333333;
+	font-size: 0.28rem;
+}
+.contentArea li select{
+	width: 18%;
+	height: 0.99rem;
+	line-height: 0.99rem;
+	display: block;
+	float: right;
+	color: #333333;
+	font-size: 0.28rem;
+	border: none;
+	background: #fff;
+	margin-right: 0.4rem;
+}
+.contentArea li div{
+	width: 35%;
+	height: 0.99rem;
+	float: right;
+	color: #333333;
+	font-size: 0.28rem;
+	margin-right: 0.4rem;
+}
+.contentArea li input{
+	width: 80%;
+	height: 0.99rem;
+	line-height: 0.99rem;
+	display: block;
+	float: left;
+	border: none;
+	background: #fff;
+	text-align: right;
+	margin-right: 10%;
+}
+input::-webkit-input-placeholder{
+	color:#c0c0c0;
+}
+.contentArea li em{
+	width: 10%;
+	height: 0.99rem;
+	line-height: 0.99rem;
+	text-align: center;
+	display: block;
+	float: left;
+	font-style: normal;
+}
+.contentArea li p{
+	width: 80%;
+	height: 0.99rem;
+	line-height: 0.99rem;
+	display: block;
+	float: left;
+	border: none;
+	background: #fff;
+	text-align: right;
+	margin-right: 10%;
+}
+/*结算按钮*/
+.jiesuan{
+	width: 40%;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	text-align: center;
+	background: #fc4736;
+	color: #fff;
+	margin-left: 30%;
+	margin-top: 1rem;
+	border:none;
+	border-radius: 0.5rem;
+}
+/*锯齿页*/
+.juchiContent{
+	width: 92%;
+	height: 3.12rem;
+	margin-left: 4%;
+	margin-top: 1rem;
+	background: url(../images/juchi2.png) no-repeat center center;
+	background-size: cover;
+	overflow: hidden;
+}
+.irr{
+	width: 100%;
+	text-align: center;
+	font-size: 0.32rem;
+	color: #333;
+	margin-top: 0.52rem;
+}
+.feilvIRR{
+	width: 100%;
+	text-align: center;
+	font-size: 0.42rem;
+	color: #fc4736;
+	margin-top: 0.82rem;
+	font-weight: 600;
+}
+
+
+
+/*屏幕控制*/
+  @media screen{
+
+		@media (min-device-width:1078px){
+            input:focus,textarea:focus {
+			   font-size: 18px !important;
+			   }
+		}
+
+
+		@media (min-device-width : 320px) and (max-device-width : 1077px){
+            input:focus,textarea:focus {
+			   font-size: 16px !important;
+			   }
+		}
+	}
+

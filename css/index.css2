@@ -1,0 +1,313 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-10-30 14:17:54
+ * @version $Id$
+ */
+
+*{margin: 0;padding: 0;}
+body{overflow-x: hidden;font-family:"微软雅黑";}
+html{ font-size:10px;}
+ul,li{list-style: none;display: block;}
+a{text-decoration: none;color: #fff;}
+
+
+
+/*外框*/
+#box{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+}
+/*切换按钮*/
+.titleBox{
+	width: 100%;
+	height: 1.5rem;
+	background: #fc4736;
+}
+.btnLeft{
+	width: 50%;
+	height: 1.5rem;
+	float: left;
+}
+.btnRight{
+	width: 50%;
+	height: 1.5rem;
+	float: left;
+}
+.changeBtn{
+	width: 62%;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	text-align: center;
+	margin-left: 19%;
+	margin-top: 0.45rem;
+	border-radius: 0.1rem;
+	background: #ffffff;
+	color: #ff806f;
+	font-size: 0.28rem;
+}
+/*中间内容*/
+/*月利率切换页面*/
+.monthBox{
+	width: 100%;
+}
+.contentBox{
+	width: 100%;
+	height: 5.98rem;
+	background: #fc4736;
+}
+.contentArea{
+	width: 92%;
+	height: 5rem;
+	background: #ffffff;
+	margin-left: 4%;
+	border-radius: 0.2rem;
+	overflow: hidden;
+}
+.contentArea ul{
+	width: 94%;
+	height: 5rem;
+	margin-left: 6%;
+}
+.contentArea li{
+	width: 100%;
+	height: 0.99rem;
+	border-bottom: 1px solid #dedede;
+}
+.contentArea li span{
+	width: 30%;
+	height: 0.99rem;
+	line-height: 0.99rem;
+	display: block;
+	float: left;
+	color: #333333;
+	font-size: 0.28rem;
+}
+.contentArea li select{
+	width: 18%;
+	height: 0.99rem;
+	line-height: 0.99rem;
+	display: block;
+	float: right;
+	color: #333333;
+	font-size: 0.28rem;
+	border: none;
+	background: #fff;
+	margin-right: 0.4rem;
+}
+.contentArea li div{
+	width: 35%;
+	height: 0.99rem;
+	float: right;
+	color: #333333;
+	font-size: 0.28rem;
+	margin-right: 0.4rem;
+}
+.contentArea li input{
+	width: 80%;
+	height: 0.99rem;
+	line-height: 0.99rem;
+	display: block;
+	float: left;
+	border: none;
+	background: #fff;
+	text-align: right;
+	margin-right: 10%;
+}
+input::-webkit-input-placeholder{
+	color:#c0c0c0;
+}
+.contentArea li em{
+	width: 10%;
+	height: 0.99rem;
+	line-height: 0.99rem;
+	text-align: center;
+	display: block;
+	float: left;
+	font-style: normal;
+}
+.contentArea li p{
+	width: 80%;
+	height: 0.99rem;
+	line-height: 0.99rem;
+	display: block;
+	float: left;
+	border: none;
+	background: #fff;
+	text-align: right;
+	margin-right: 10%;
+}
+/*结算按钮*/
+.jiesuan{
+	width: 40%;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	text-align: center;
+	background: #fc4736;
+	color: #fff;
+	margin-left: 30%;
+	margin-top: 0.64rem;
+	border:none;
+	border-radius: 0.5rem;
+}
+/*锯齿页*/
+.juchiContent{
+	width: 92%;
+	height: 1.93rem;
+	margin-left: 4%;
+	margin-top: 0.65rem;
+	background: url(../images/juchi1.png) no-repeat center center;
+	background-size: cover;
+	overflow: hidden;
+}
+.feilvYear{
+	width: 94%;
+	height: 0.28rem;
+	margin-left: 6%;
+	margin-top: 0.5rem;
+	font-size: 0.28rem;
+	color: #333;
+}
+.feilvYear span{
+	margin: 0 0.25rem 0 0.2rem;
+	color: #fc4736;
+}
+.feilvMonth{
+	width: 94%;
+	height: 0.28rem;
+	margin-left: 6%;
+	margin-top: 0.25rem;
+	font-size: 0.28rem;
+	color: #333;
+}
+.feilvMonth span{
+	margin-left: 0.2rem;
+	color: #fc4736;
+}
+.rate{
+	width: 100%;
+	height: 1.93rem;
+	line-height: 1.93rem;
+	margin-left: 0.4rem;
+	font-size: 0.36rem;
+}
+.rate span{
+	margin-left: 0.2rem;
+	color: #fc4736;
+}
+
+
+
+/*年利率切换页面*/
+.yearBox{
+	width: 100%;
+	display: none;
+	background: #fff;
+}
+.contentBoxYear{
+	width: 100%;
+	height: 4.96rem;
+	background: #fc4736;
+}
+.contentAreaYear{
+	width: 92%;
+	height: 3.96rem;
+	background: #ffffff;
+	margin-left: 4%;
+	border-radius: 0.2rem;
+	overflow: hidden;
+}
+.contentAreaYear ul{
+	width: 94%;
+	height: 3.96rem;
+	margin-left: 6%;
+}
+.contentAreaYear li{
+	width: 100%;
+	height: 0.99rem;
+	border-bottom: 1px solid #dedede;
+}
+.contentAreaYear li span{
+	width: 30%;
+	height: 0.99rem;
+	line-height: 0.99rem;
+	display: block;
+	float: left;
+	color: #333333;
+	font-size: 0.28rem;
+}
+.contentAreaYear li select{
+	width: 18%;
+	height: 0.99rem;
+	line-height: 0.99rem;
+	display: block;
+	float: right;
+	color: #333333;
+	font-size: 0.28rem;
+	border: none;
+	background: #fff;
+	margin-right: 0.4rem;
+}
+.contentAreaYear li div{
+	width: 35%;
+	height: 0.99rem;
+	float: right;
+	color: #333333;
+	font-size: 0.28rem;
+	margin-right: 0.4rem;
+}
+.contentAreaYear li input{
+	width: 80%;
+	height: 0.99rem;
+	line-height: 0.99rem;
+	display: block;
+	float: left;
+	border: none;
+	background: #fff;
+	text-align: right;
+	margin-right: 10%;
+}
+.contentAreaYear li em{
+	width: 10%;
+	height: 0.99rem;
+	line-height: 0.99rem;
+	text-align: center;
+	display: block;
+	float: left;
+	font-style: normal;
+}
+.contentAreaYear li p{
+	width: 80%;
+	height: 0.99rem;
+	line-height: 0.99rem;
+	display: block;
+	float: left;
+	border: none;
+	background: #fff;
+	text-align: right;
+	margin-right: 10%;
+}
+
+
+/*屏幕控制*/
+  @media screen{
+
+		@media (min-device-width:1078px){
+            input:focus,textarea:focus {
+			   font-size: 18px !important;
+			   }
+		}
+
+
+		@media (min-device-width : 320px) and (max-device-width : 1077px){
+            input:focus,textarea:focus {
+			   font-size: 16px !important;
+			   }
+		}
+	}
+

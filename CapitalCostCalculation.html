@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no" />
+<title>资金成本计算</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<link href="css/CapitalCostCalculation.css" rel="stylesheet">
+<link href="layer_mobile/need/layer.css" rel="stylesheet">
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="layer_mobile/layer.js"></script>
+<script src="js/calculator.js"></script>
+</head>
+
+
+<body>
+
+<div id="box">
+	
+	<!-- 月利率切换页 -->
+
+	<div class="contentBox">
+		<div class="contentArea">
+			<ul>
+				<li>
+					<span>期限</span>
+					<select id='months'>
+						<option>12</option>
+						<option>24</option>
+						<option>36</option>
+						<option>48</option>
+						<option>60</option>
+					</select>
+				</li>
+				<li>
+					<span>保证金比例</span>
+					<div>
+						<input id='gRate' type="number" class="baozhengjin" name="" placeholder="请输入百分比">
+						<em>%</em>
+					</div>
+				</li>
+				<li>
+					<span>手续费比例</span>
+					<div>
+						<input id='sRate' type="number" class="shouxufei" name="" placeholder="请输入百分比">
+						<em>%</em>
+					</div>
+				</li>
+				<li>
+					<span>年化利率</span>
+					<div>
+						<input id='yearRate' type="number" class="nianhuali" name="" placeholder="请输入百分比">
+						<em>%</em>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<button name="submit" id="jisuanIrr" class="jiesuan">计算IRR</button>
+
+	<div class="juchiContent">
+		<div class="irr">IRR(资金成本)</div>
+		<div id='IRR' class="feilvIRR">8.125%</div>
+	</div>
+
+</div>
+	
+	
+</div>
+
+</body>
+
+<script type="text/javascript">
+//rem适配
+!(function(win, doc){
+    function setFontSize() {
+        // 获取window 宽度
+        var winWidth =  window.innerWidth;
+        // 640宽度以上进行限制 需要css进行配合
+        var size = (winWidth / 750) * 100;
+        doc.documentElement.style.fontSize = size + 'px' ;
+    }
+    var evt = 'onorientationchange' in win ? 'orientationchange' : 'resize';
+    var timer = null;
+    win.addEventListener(evt, function () {
+        clearTimeout(timer);
+        timer = setTimeout(setFontSize, 300);
+    }, false);
+
+    win.addEventListener("pageshow", function(e) {
+        if (e.persisted) {
+            clearTimeout(timer);
+            timer = setTimeout(setFontSize, 300);
+        }
+    }, false);
+    // 初始化
+    setFontSize();
+}(window, document));
+
+
+
+// 点击切换页面
+$('.monthLv').click(function(){
+	$('.monthBox').css("display","block");
+	$('.yearBox').css("display","none");
+});
+
+$('.yearLv').click(function(){
+	$('.monthBox').css("display","none");
+	$('.yearBox').css("display","block");
+});
+
+$("#jisuanIrr").click(function () {
+	var baozhengjin=$(".baozhengjin").val();
+	var shouxufei=$(".shouxufei").val();
+	var nianhuali=$(".nianhuali").val();
+	if (baozhengjin == '' || baozhengjin == undefined || baozhengjin == null){
+		layer.open({
+			content: '请输入保证金比例',
+			btn: '确认'
+		});
+	} else if(shouxufei == '' || shouxufei == undefined || shouxufei == null){
+		layer.open({
+			content: '请输入手续费比例',
+			btn: '确认'
+		});
+	} else if(nianhuali == '' || nianhuali == undefined || nianhuali == null){
+		layer.open({
+			content: '请输入年化利率',
+			btn: '确认'
+		});
+	}
+	
+	var rze=10000;//万元基础系数
+	var months=$('#months').val();//期数
+	var yearRate=$('#yearRate').val()/100;//年化利率
+	var gRate=$('#gRate').val()/100;//保证金比例
+	var sRate=$('#sRate').val()/100;//手续费比例
+	var irr=getJyIRR( rze,  months,  yearRate,  gRate, sRate);
+	
+	$('#IRR').text(irr+'%');
+})
+</script>
+
+
+
+</html>
